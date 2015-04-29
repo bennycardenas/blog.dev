@@ -36,12 +36,51 @@
 
 
 
-
+Route::get('/', 'HomeController@showWelcome');
 
 Route::get('/resume', 'HomeController@showResume');
 
 Route::get('/portfolio', 'HomeController@showPortfolio');
 
+Route::get('/game', 'HomeController@showGame');
+
+Route::controller('about', 'AboutController');
+Route::resource('posts', 'PostsController');
+
+
+// Route::get('orm-test', function()
+// {
+    // $post = new Post();
+    // $post->title = 'New Blog';
+    // $post->body = 'Lorem Ipsum';
+    // $post->save();
+
+    // $post = Post::find(1);
+    // return $post;
+
+    // $post = Post::all();
+    // return $post;
+
+    // try {
+    //     $post = Post::findOrFail(5);
+    //     return $post;
+    // }catch (Exception $e) {
+    //     // return 'no queries';
+    //     return $e->getMessage();
+    // }
+
+    //     try {
+    //     $post = Post::findOrFail(1);
+    //     // return $post->title;
+    //     $post->title = 'Updated Blog';
+    //     $post->save();
+    // }catch (Exception $e) {
+    //     // return 'no queries';
+    //     return $e->getMessage();
+    // }
+
+
+// });
 
 
 

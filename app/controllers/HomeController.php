@@ -13,6 +13,7 @@ class HomeController extends BaseController {
 	|
 	|	Route::get('/', 'HomeController@showWelcome');
 	|	FUNCTIONS THAT HAPPEN TO BE IN A CONTROLLER ARE CALLED AN ACTION
+	|	
 	*/
 
 	public function showWelcome()
@@ -29,5 +30,11 @@ class HomeController extends BaseController {
 	{
 		return View::make('portfolio');
 	}
+
+	// public function showGame()
+	// {
+		
+	// }
+
 
 }
