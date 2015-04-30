@@ -7,6 +7,14 @@
 @stop
 
 
+@if($errors->all())
+    <div class="alert alert-danger" role="alert">
+        @foreach($errors->all() as $error)
+            {{$error}}
+        @endforeach
+    </div>
+@endif
+
 @section('content')
 
 <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.6.0/pure-min.css">
@@ -17,6 +25,9 @@
         padding-top:120px;
     }
 </style>
+
+        {{ $errors->first('title', '<span class="help-block">:message</span>') }}
+
 
         <form class="pure-form pure-form-aligned" method="post" action="{{{ action('PostsController@store') }}}">
             <fieldset>

@@ -10,7 +10,7 @@ class PostsController extends \BaseController {
 	public function index()
 	{
 		// return 'Output list of all posts';
-		$posts = Post::all();
+		$posts = Post::paginate(4);
 
 		$data = array(
 			'posts' => $posts
@@ -37,9 +37,22 @@ class PostsController extends \BaseController {
 	 */
 	public function store()
 	{
-		return Redirect::back()->withInput();
-	}
+		$validator = Validator::make(Input::all(), Post::$rules);
 
+		if($validator->fails()){
+			// return ' woh oh';
+			return Redirect::back()->withInput()->withErrors($validator);
+
+		} else {
+
+		$post = new Post;
+		$post->title = Input::get('title');
+		$post->body = Input::get('body');
+		$post->save();
+		return Redirect::to('/posts');
+
+		}
+	}
 
 	/**
 	 * Display the specified resource.
@@ -49,13 +62,21 @@ class PostsController extends \BaseController {
 	 */
 	public function show($id)
 	{
-		// return "show post id: $id";
-		$post = Post::find($id);
+		try{
+			$post = Post::findOrFail($id);
+			$data = array (
+				'post'=>$post
+				);
+			return View::make('posts.show')->with($data);
 
-		$data = array(
-			'post' => $post
-			);
-		return View::make('posts.show')->with($data);
+		} catch (Exception $e) {
+
+			$data = array(
+				'error' => $e->getMessage()
+				);
+
+			return View::make('errors.exceptions')->with($data);
+		}
 	}
 
 
