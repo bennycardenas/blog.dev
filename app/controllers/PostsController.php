@@ -18,7 +18,6 @@ class PostsController extends \BaseController {
 		return View::make('posts.index')->with($data);
 	}
 
-
 	/**
 	 * Show the form for creating a new resource.
 	 *
@@ -27,8 +26,11 @@ class PostsController extends \BaseController {
 	public function create()
 	{
 		return View::make('posts.create');
-	}
 
+
+		Session::flash('errorMessage','Update failed. See error message.');
+		return Redirect::action('PostsController@index');
+	}
 
 	/**
 	 * Store a newly created resource in storage.
@@ -79,7 +81,6 @@ class PostsController extends \BaseController {
 		}
 	}
 
-
 	/**
 	 * Show the form for editing the specified resource.
 	 *
@@ -88,9 +89,23 @@ class PostsController extends \BaseController {
 	 */
 	public function edit($id)
 	{
-		return "Edit post $id";
-	}
 
+		try{
+			$post = Post::findOrFail($id);
+			$data = array (
+				'post'=>$post
+				);
+			return View::make('posts.edit')->with($data);
+
+		} catch (Exception $e) {
+
+			$data = array(
+				'error' => $e->getMessage()
+				);
+
+			return View::make('errors.exceptions')->with($data);
+		}
+	}
 
 	/**
 	 * Update the specified resource in storage.
@@ -100,9 +115,24 @@ class PostsController extends \BaseController {
 	 */
 	public function update($id)
 	{
-		return "Update post with id: $id";
-	}
+		$validator = Validator::make(Input::all(), Post::$rules);
 
+		if($validator->fails()){
+			// return ' woh oh';
+			Session::flash('errorMessage','Update failed. See error message.');
+			return Redirect::back()->withInput()->withErrors($validator);
+
+		} else {
+
+		$post = new Post;
+		$post->title = Input::get('title');
+		$post->body = Input::get('body');
+		$post->save();
+		Session::flash('successMessage','Update successful.');
+		return Redirect::to('/posts');
+
+		}
+	}
 
 	/**
 	 * Remove the specified resource from storage.
@@ -112,7 +142,13 @@ class PostsController extends \BaseController {
 	 */
 	public function destroy($id)
 	{
-		return "Destroy post $id";
+
+		$post = Post::findOrFail($id);
+		$post->delete();
+
+		Session::flash('successMessage','Post successful deleted.');
+		return Redirect::action('PostsController@index');
+
 	}
 
 

@@ -1,26 +1,21 @@
 @extends('layouts.master')
 
-@if($errors->all())
-    <div class="alert alert-danger" role="alert">
-        @foreach($errors->all() as $error)
-            {{$error}}
-        @endforeach
-    </div>
-@endif
-
 @section('content')
 
-<link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.6.0/pure-min.css">
+        <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.6.0/pure-min.css">
 
-<style type="text/css">
-    body{
-        padding-top:190px;
-    }
-    h1  {
-        margin-left: 80px;
-    }
-</style>
-    <h1>Blog Entry</h1>
+        <style type="text/css">
+                body{
+                padding-top: 120px;
+                padding-left: 20px;
+            }
+        </style>
+
+
+        {{-- Form Model binding according to Ryano --}}
+        {{ Form::model($post, array('action'=> ['PostsController@update', $post->id], 'method'=> 'PUT', 'class'=>'blog-form','id'=>'posts-create-form')) }}
+
+
         {{ Form::open(array('action' => 'PostsController@store', 'class'=> 'pure-form pure-form-aligned' )) }}
             <fieldset>
                 <div class="pure-control-group">
@@ -36,12 +31,12 @@
                     <input name="body" id="password" type="text" placeholder="Body" value="{{{ Input::old('password') }}}"> --}}
                 </div>
 
-
                 <div class="pure-controls">
-                    {{ Form::submit('')}}
-                    <button type="submit" class="pure-button pure-button-primary">Submit Blog Entry!</button>
+                    <button type="submit" class="pure-button pure-button-primary">Update Blog Entry!</button>
                 </div>
             </fieldset>
+
+
         {{ Form::close() }}
 
 @stop

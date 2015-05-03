@@ -12,4 +12,14 @@
 </style>
 
 <h3>{{{$post->title}}}</h3>
-<p>{{{$post->body}}}</p>
+
+    <p>Created:{{{$post->created_at->setTimezone('America/Chicago')->format('l, F jS Y @ h:i:s A')}}}</p>
+    <p>Last updated: {{{$post->updated_at->setTimezone('America/Chicago')->format('l, F jS Y @ h:i:s A')}}}</p>
+
+    <p>{{{$post->body}}}</p>
+
+<a href="{{{ action('PostsController@edit', $post->id) }}}">Edit</a>
+
+    {{ Form::open(array('method'=>'delete', 'action'=>['PostsController@destroy', $post->id]))}}
+        <button type='submit' class='btn btn-danget btn-sm'>Delete Post</button>
+    {{Form::close()}}
