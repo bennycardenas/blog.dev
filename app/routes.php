@@ -48,6 +48,14 @@ Route::controller('about', 'AboutController');
 
 Route::resource('posts', 'PostsController');
 
+Route::get('test404', function()
+{
+    Log::info('This is useful');
+    Log::warning('Something went wrong');
+    Log::error('Something went really wrong');
+
+    App::abort(404);
+});
 
 // Route::get('orm-test', function()
 // {

@@ -49,9 +49,15 @@ class PostsController extends \BaseController {
 
 		$post = new Post;
 		$post->title = Input::get('title');
+		$post->slug = Input::get('title');
 		$post->body = Input::get('body');
 		$post->save();
-		return Redirect::to('/posts');
+
+		Log::info('===========================');
+		Log::info('Title:' . Input::get('title'));
+		Log::info('Body:' . Input::get('body'));
+
+		return Redirect::action('PostsController@index');
 
 		}
 	}
@@ -62,22 +68,28 @@ class PostsController extends \BaseController {
 	 * @param  int  $id
 	 * @return Response
 	 */
+
 	public function show($id)
 	{
 		try{
-			$post = Post::findOrFail($id);
+
+			if(is_numeric($id)){
+				$post = Post::findOrFail($id);
+			} else {
+				$slug = $id;
+				$post = Post::where('slug','=', $slug)->firstOrFail();
+			}
+
 			$data = array (
 				'post'=>$post
 				);
+
 			return View::make('posts.show')->with($data);
 
 		} catch (Exception $e) {
 
-			$data = array(
-				'error' => $e->getMessage()
-				);
-
-			return View::make('errors.exceptions')->with($data);
+			Log::error($e);
+			App::abort(404);
 		}
 	}
 

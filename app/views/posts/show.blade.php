@@ -13,8 +13,8 @@
 
 <h3>{{{$post->title}}}</h3>
 
-    <p>Created:{{{$post->created_at->setTimezone('America/Chicago')->format('l, F jS Y @ h:i:s A')}}}</p>
-    <p>Last updated: {{{$post->updated_at->setTimezone('America/Chicago')->format('l, F jS Y @ h:i:s A')}}}</p>
+    <p>Created:{{{$post->created_at}}}</p>
+    <p>Last updated: {{{$post->updated_at}}}</p>
 
     <p>{{{$post->body}}}</p>
 

@@ -15,6 +15,6 @@
 
 @section('content')
 {{-- <h2>{{{ $error }}}</h2> --}}
-<h2>No Results Found</h2>
+<h2>Page Missing</h2>
 @stop
 
