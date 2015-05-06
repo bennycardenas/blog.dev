@@ -16,6 +16,8 @@ class User extends BaseModel implements UserInterface, RemindableInterface {
 	 */
 	protected $table = 'users';
 
+	#Rules go here
+
 	/**
 	 * The attributes excluded from the model's JSON form.
 	 *
@@ -32,5 +34,17 @@ class User extends BaseModel implements UserInterface, RemindableInterface {
 	{
 	    $this->attributes['password'] = Hash::make($value);
 	}
+
+	public function setUsernameAttribute($value)
+    {
+        $this->attributes['username'] = strtolower($value);
+    }
+
+	public function posts()
+	{
+	    return $this->hasMany('Post');
+	}
+
+
 
 }

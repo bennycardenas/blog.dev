@@ -1,8 +1,7 @@
 <?php
 
-use Carbon\Carbon;
+class Post extends BaseModel
 
-class Post extends Eloquent
 {
     protected $table='posts';
 
@@ -14,21 +13,14 @@ class Post extends Eloquent
 
     // Created Accessor
 
-    public function getCreatedAtAttribute($value)
-    {
-        $utc = Carbon::createFromFormat($this->getDateFormat(), $value);
-        return $utc->setTimezone('America/Chicago');
-    }
-
-    public function getUpdatedAtAttribute($value)
-    {
-        $utc = Carbon::createFromFormat($this->getDateFormat(), $value);
-        return $utc->setTimezone('America/Chicago')->diffForHumans();
-    }
-
     public function setSlugAttribute($value)
     {
         $this->attributes['slug'] = Str::slug($value);
+    }
+
+    public function user()
+    {
+        return $this->belongsTo('User');
     }
 
 }

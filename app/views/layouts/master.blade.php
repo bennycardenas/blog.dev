@@ -72,6 +72,9 @@
                         <a href="#page-top"></a>
                     </li>
                     <li class="page-scroll">
+                        <a href="{{{ action ('PostsController@index')}}}">Blog</a>
+                    </li>
+                    <li class="page-scroll">
                         <a href="{{{ action ('HomeController@showPortfolio')}}}">Portfolio</a>
                     </li>
                     <li class="page-scroll">
@@ -80,6 +83,19 @@
                     <li class="page-scroll">
                         <a href="#contact">Contact</a>
                     </li>
+
+                    {{-- login and out --}}
+                    @if(Auth::check())
+                        <li>Hello, {{{ Auth::user()->username }}}</li>
+                        <li class="page-scroll">
+                            <a href="{{{ action('HomeController@logout') }}}">Logout</a>
+                        </li>
+                    @else
+                        <li class="page-scroll">
+                            <a href="{{{ action('HomeController@login') }}}">Login</a>
+                        </li>
+                    @endif
+
                 </ul>
             </div>
             <!-- /.navbar-collapse -->
@@ -163,11 +179,14 @@
     <script src="js/cbpAnimatedHeader.js"></script>
 
     <!-- Contact Form JavaScript -->
-    <script src="js/jqBootstrapValidation.js"></script>
     <script src="js/contact_me.js"></script>
 
     <!-- Custom Theme JavaScript -->
     <script src="js/freelancer.js"></script>
+
+    <script>
+        $('.alert').fadeout(7000,'swing');
+    </script>
 
 </body>
 

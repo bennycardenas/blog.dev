@@ -2,20 +2,28 @@
 
 class PostsController extends \BaseController {
 
+	public function __construct()
+	{
+		$this->beforeFilter('auth', ['except'=>['index', 'show']]);
+	}
+
 	/**
 	 * Display a listing of the resource.
 	 *
 	 * @return Response
 	 */
+
 	public function index()
 	{
 		// return 'Output list of all posts';
-		$posts = Post::paginate(4);
+		$posts = Post::with('user')->orderBy('created_at', 'DESC')->paginate(10);
 
 		$data = array(
 			'posts' => $posts
 			);
 		return View::make('posts.index')->with($data);
+
+		$post->user->email;
 	}
 
 	/**
@@ -51,6 +59,7 @@ class PostsController extends \BaseController {
 		$post->title = Input::get('title');
 		$post->slug = Input::get('title');
 		$post->body = Input::get('body');
+		$post->user_id = 1;
 		$post->save();
 
 		Log::info('===========================');
@@ -76,8 +85,9 @@ class PostsController extends \BaseController {
 			if(is_numeric($id)){
 				$post = Post::findOrFail($id);
 			} else {
+				// Slug is a non-numeric string
 				$slug = $id;
-				$post = Post::where('slug','=', $slug)->firstOrFail();
+				$post = Post::where('slug', $slug)->firstOrFail();
 			}
 
 			$data = array (
@@ -136,9 +146,10 @@ class PostsController extends \BaseController {
 
 		} else {
 
-		$post = new Post;
+		$post = Post::find($id);
 		$post->title = Input::get('title');
 		$post->body = Input::get('body');
+		$post->slug = Input::get('title');
 		$post->save();
 		Session::flash('successMessage','Update successful.');
 		return Redirect::to('/posts');
@@ -158,7 +169,7 @@ class PostsController extends \BaseController {
 		$post = Post::findOrFail($id);
 		$post->delete();
 
-		Session::flash('successMessage','Post successful deleted.');
+		Session::flash('successMessage','Post successfully deleted.');
 		return Redirect::action('PostsController@index');
 
 	}
