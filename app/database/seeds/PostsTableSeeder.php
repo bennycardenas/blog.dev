@@ -22,9 +22,9 @@ class PostsTableSeeder extends Seeder {
 
             'title' => $faker->catchPhrase,
             'body'  => $faker->realText($maxNbChars = 200, $indexSize = 2),
-            'slug'  => $faker->slug,
+            'slug'  => $faker->unique()->slug,
             'user_id'  => $user->id,
-            
+
             ]);
             // $post = new Post();
             // $post->title = $faker->catchPhrase;

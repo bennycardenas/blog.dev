@@ -1,4 +1,4 @@
-@extends('layouts.master')
+    @extends('layouts.master')
 
 @if($errors->all())
     <div class="alert alert-danger" role="alert">

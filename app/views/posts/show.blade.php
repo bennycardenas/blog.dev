@@ -9,6 +9,8 @@
     }
 </style>
 
+
+
 <h3>{{{$post->title}}}</h3>
 
     <p>Created:{{{$post->created_at}}}</p>

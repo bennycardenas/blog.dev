@@ -22,8 +22,8 @@ class UserTableSeeder extends Seeder {
         for ($i=1; $i<=8; $i++)
         {
             $user = new User();
-            $user->username =   $faker->userName;
-            $user->email =      $faker->email;
+            $user->username =   $faker->unique()->userName;
+            $user->email =      $faker->unique()->email;
             $user->password =   $faker->password;
             $user->save();
         }
