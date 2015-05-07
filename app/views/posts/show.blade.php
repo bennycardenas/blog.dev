@@ -17,10 +17,20 @@
 
     <p>{{{$post->body}}}</p>
 
+        <form class="page-scroll pure-form">
+            <fieldset>
+                <input name="search" type="text" placeholder="Search Blog">
+                <button type="submit" class="pure-button pure-button-primary">Search!</button>
+            </fieldset>
+        </form>
+
 <a href="{{{ action('PostsController@edit', $post->id) }}}">Edit</a>
 
     {{ Form::open(array('method'=>'delete', 'action'=>['PostsController@destroy', $post->id]))}}
         <button type='submit' class='btn btn-danget btn-sm'>Delete Post</button>
+
+
+
     {{Form::close()}}
 
 @stop

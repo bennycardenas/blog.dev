@@ -5,6 +5,7 @@ class PostsController extends \BaseController {
 	public function __construct()
 	{
 		$this->beforeFilter('auth', ['except'=>['index', 'show']]);
+		parent::__construct();
 	}
 
 	/**
@@ -22,8 +23,12 @@ class PostsController extends \BaseController {
 			'posts' => $posts
 			);
 		return View::make('posts.index')->with($data);
+	}
 
-		$post->user->email;
+	public function search()
+	{
+
+		
 	}
 
 	/**

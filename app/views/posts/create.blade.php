@@ -38,8 +38,9 @@
 
 
                 <div class="pure-controls">
-                    {{ Form::submit('')}}
-                    <button type="submit" class="pure-button pure-button-primary">Submit Blog Entry!</button>
+                    {{-- {{ Form::submit()}} --}}
+                    <button type="submit" class="pure-button pure-button-primary">Submit Blog Entry!
+                    </button>
                 </div>
             </fieldset>
         {{ Form::close() }}

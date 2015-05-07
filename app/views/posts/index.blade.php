@@ -14,6 +14,15 @@
 {{$posts->links()}}
 
     <h1>Blog Posts</h1>
+
+        <form class="page-scroll pure-form">
+            <fieldset>
+                <input name="search" type="text" placeholder="Search Blog">
+                <button type="submit" class="pure-button pure-button-primary">Search!</button>
+            </fieldset>
+        </form>
+
+
         <ul>
             @foreach($posts as $post)
             <h3><a href="{{{action('PostsController@show', $post->slug)}}}">{{{$post->title}}}</a></h3>
