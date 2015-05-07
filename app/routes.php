@@ -19,7 +19,7 @@ Route::get('/portfolio', 'HomeController@showPortfolio');
 
 Route::get('/game', 'HomeController@showGame');
 
-Route::controller('about', 'AboutController');
+// Route::controller('about', 'AboutController');
 
 Route::resource('posts', 'PostsController');
 

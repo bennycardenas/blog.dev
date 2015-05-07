@@ -25,11 +25,22 @@ class PostsController extends \BaseController {
 		return View::make('posts.index')->with($data);
 	}
 
-	public function search()
-	{
+	// public function search()
+	// {
 
-		
-	}
+	// 	$query = Post::with('user');
+
+	//     $search = Input::get('search');
+
+	//     $query->where('title', 'like', '%'. $search . '%');
+	//     $query->orWhere('body' 'like' '%' . $search . '%');
+
+	//     $query->orWhereHas('user', function($q){
+	//         $q->where('username','like','%benny%')
+
+	//     return Make::view('')
+ 	//    });
+	// }
 
 	/**
 	 * Show the form for creating a new resource.
