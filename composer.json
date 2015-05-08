@@ -6,11 +6,15 @@
 	"type": "project",
 	"require": {
 		"laravel/framework": "4.2.*",
-		"fzaninotto/faker": "1.5.*@dev"
+		"fzaninotto/faker": "~1.4",
+		"zizaco/confide": "~4.3@dev",
+		"esensi/model": "0.3.*",
+		"bbatsche/entrust": "~2.0"
 	},
 	"require-dev":{
-		"barryvdh/laravel-debugbar": "1.8.*"
-		},
+		"barryvdh/laravel-debugbar": "1.8.*",
+		"way/generators": "2.6.1"
+	},
 	"autoload": {
 		"classmap": [
 			"app/commands",

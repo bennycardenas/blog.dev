@@ -14,15 +14,14 @@
 
 <style type="text/css">
     body{
-        padding-top:190px;
+        padding-top:120px;
     }
-    h1  {
-        margin-left: 80px;
-    }
+
+
 </style>
 
 {{-- {{{ var_dump($_POST) }}} --}}
-
+<div class="container">
     <h1>Please Log In!</h1>
         {{ Form::open(array('action' => 'HomeController@doLogin', 'class'=> 'pure-form pure-form-aligned' )) }}
             <fieldset>
@@ -47,5 +46,7 @@
                 </div>
             </fieldset>
         {{ Form::close() }}
+
+</div>
 
 @stop

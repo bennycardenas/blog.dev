@@ -1,8 +1,9 @@
 <?php
 
 use Carbon\Carbon;
+use \Esensi\Model\Model;
 
-class BaseModel extends Eloquent
+class BaseModel extends Model
 {
     public function getCreatedAtAttribute($value)
     {

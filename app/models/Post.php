@@ -5,7 +5,7 @@ class Post extends BaseModel
 {
     protected $table='posts';
 
-    public static $rules = [
+    protected $rules = [
         'title' => 'required|max:100',
         'body' => 'required|max:1000'
     ];

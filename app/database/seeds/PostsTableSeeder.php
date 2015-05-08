@@ -5,12 +5,10 @@ use Faker\Factory as Faker;
 class PostsTableSeeder extends Seeder {
 
     //Fill DB with user(s)
-
     //@return void
 
     public function run()
     {
-
         $faker = Faker::create();
 
         for($i=1; $i<=100; $i++)
@@ -33,6 +31,5 @@ class PostsTableSeeder extends Seeder {
             // $post->$user->id = mt_rand(1,8);
             // $post->save();
         }
-
     }
 }

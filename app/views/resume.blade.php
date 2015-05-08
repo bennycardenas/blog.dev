@@ -9,9 +9,7 @@
 @section('content')
 
 <style type="text/css">
-#about{
-    margin-top: 40px;
-}
+
 </style>
     <!-- Resume -->
     <section class="success" id="about">
@@ -29,11 +27,13 @@
                 <div class="col-lg-4">
                     <p>Whether you're a student looking to showcase your work, a professional looking to attract clients, or a graphic artist looking to share your projects, this template is the perfect starting point!</p>
                 </div>
-                <div class="col-lg-8 col-lg-offset-2 text-center">
+
+                {{-- Possibly allow to download Resume for view in Modal --}}
+                {{-- <div class="col-lg-8 col-lg-offset-2 text-center">
                     <a href="#" class="btn btn-lg btn-outline">
                         <i class="fa fa-download"></i> Download Theme
                     </a>
-                </div>
+                </div> --}}
             </div>
         </div>
     </section>
