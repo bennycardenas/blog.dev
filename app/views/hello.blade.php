@@ -18,7 +18,7 @@
                     <div class="intro-text">
                         <span class="name">Benny's Website</span>
                         <hr class="star-light">
-                        <span class="skills">Web Developer - Librarian - Coder</span>
+                        <span class="skills">Web Developer & Librarian</span>
                     </div>
                 </div>
             </div>
@@ -67,8 +67,6 @@
                                 <p class="help-block text-danger"></p>
                             </div>
                         </div>
-                        
-                        <br>
 
                         <div class="row">
                             <div class="form-group col-xs-12">
