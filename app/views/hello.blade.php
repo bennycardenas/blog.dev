@@ -17,8 +17,11 @@
                     <img class="img-responsive" src="img/profile.png" alt="">
                     <div class="intro-text">
                         <span class="name">Benny's Website</span>
+                        <br>
+                        <span class="skills">SITE UNDER CONSTRUCTION</span>
                         <hr class="star-light">
                         <span class="skills">Web Developer & Librarian</span>
+
                     </div>
                 </div>
             </div>
