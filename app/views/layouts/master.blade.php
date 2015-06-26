@@ -14,7 +14,6 @@
         <div class="alert alert-danger">{{{ Session::get('errorMessage') }}}</div>
     @endif
 
-
 <body id="page-top" class="index">
 
 @yield('content')
