@@ -1,0 +1,21 @@
+<?php
+
+use Carbon\Carbon;
+use \Esensi\Model\Model;
+
+class BaseModel extends Model
+{
+    public function getCreatedAtAttribute($value)
+    {
+        $utc = Carbon::createFromFormat($this->getDateFormat(), $value);
+        return $utc->setTimezone('America/Chicago')->format('l, F jS Y @ h:i:s A');
+    }
+
+    public function getUpdatedAtAttribute($value)
+    {
+        $utc = Carbon::createFromFormat($this->getDateFormat(), $value);
+        return $utc->setTimezone('America/Chicago')->diffForHumans();
+    }
+
+}
+
