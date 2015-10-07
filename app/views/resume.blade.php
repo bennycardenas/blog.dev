@@ -22,48 +22,58 @@
             </div>
             <div class="row">
                 <div class="col-lg-4 col-lg-offset-2">
-                    <p>CONTACT</p>
-                    1211 W. Ashby Place <br>
-                    San Antonio, TX 78201 <br>
-                    (210) 322-0876 <br>
-                    benitocardenas@gmail.com</p>
+                    {{-- <p> <u> CONTACT </u> </p> --}}
+                    <center>
+                    {{-- 1211 W. Ashby Pl      |  
+                    San Antonio, TX 78201  |   --}}
+                    benitocardenas@gmail.com  |  
+                    210.322.0876</center>
                 </div>
+                <br>
+            </div>
+            <br>
                 <div class="col-lg-4">
-                    <p>SKILLS</p>
+                    <p> <u> SKILLS </u> </p>
                     Linux, Apache(NginX), MySQL, PHP, JavaScript, jQuery, HTML5, CSS3, Laravel, Git, GitHub, Microsoft Office, Information Literacy Development, Source Tree, CLI </p>
                 </div>
-            </div>
-
-            <br>
-
+                <br>
                 <div class="col-lg-8 col-lg-offset-2">
-                    <p>WEB DEVELOPMENT EXPERIENCE</p>
-                        <p> Weather Forecast Web App</p>
-                        Constructed a web app that provides real-time forecasts with click-and-drag functionality using APIs for Google and Open Weather in conjunction with AJAX <br>
+                    <p> <u> WEB DEVELOPMENT EXPERIENCE </u> </p>
+                        <p>Weather Forecast Web App</p>
+                        Constructed a web app that provides real-time forecasts with click-and-drag functionality using APIs for Google and Open Weather in conjunction with AJAX
                 </div>
+                <br>
                 <div class="col-lg-8 col-lg-offset-2">
                     <p>National Parks Database Web App</p>
-                        <p>Developed a basic framework to generate a web interface in order to access/modify a database of National Parks using PHP, MySQL Pro, Twitter Bootstrap
-                        </p>
-                    </p>
+                        Developed a basic framework to generate a web interface in order to access/modify a database of National Parks using PHP, MySQL Pro, Twitter Bootstrap
                 </div>
+                <br>
                 <div class="col-lg-8 col-lg-offset-2">
-                    <p>Blog/Personal Page<br>
-                        Built personal site with blog using Laravel, MySQL Pro, Twitter Bootstrap, Custom CSS, Pure CSS Framework, Faker
-                    </p>
+                    <p>Blog/Personal Page</p>
+                        Built this personal site with blog with user authentication using Laravel, MySQL Pro, Twitter Bootstrap, Custom CSS, Pure CSS Framework, Faker
                 </div>
+                <br>
+                <div class="col-lg-8 col-lg-offset-2">
 
-                <div class="col-lg-8 col-lg-offset-2">
-                    <p>ADDITIONAL EXPERIENCE</p>
-                        <p>Bilingual Service Representative, SSA- June 2010 – Jan. 2015, San Antonio, TX</p>
+                    <p><u>ADDITIONAL EXPERIENCE</u></p>
+
+                        <p>System Developer Associate, Accenture, May 2015 - Oct 2015, San Antonio, TX</p>
+                        <ul>
+                            <li>Produced functional design tests and documentation</li>
+                            <li>Used Virtual Machine environments for various applications</li>
+                            <li>Extensive use of Micrsoft Office</li>
+                            <li>Extensive use of Oracle environments</li>
+
+                        </ul>
+
+                        <p>Bilingual Service Representative, SSA- Jun 2010 – Jan 2015, San Antonio, TX</p>
                         <ul>
                             <li>Interfaced with federal and state agencies to educate number holders on rights and responsibilities</li>
                             <li>Performed issuance of social security numbers and replacement cards</li>
                         </ul>
                 </div>
-
                 <div class="col-lg-8 col-lg-offset-2">
-                        <p>Director, One Telluride- Dec. 2005 – Aug. 2009, Telluride, CO</p>
+                        <p>Director, One Telluride, Dec 2005 – Aug 2009, Telluride, CO</p>
                         <ul>
                             <li>Established One Telluride Cultural Resource Center with mission of Immigrant Integration
                             </li>
@@ -112,38 +122,37 @@
                             </li>
                         </ul>
                 </div>
-
-
+                <br>
                 <div class="row">
-                <div class="col-lg-3 col-lg-offset-2">
-                    <p>EDUCATION</p>
-                    Codeup<br>
-                    Web Development Bootcamp<br>
-                    Jan – May 2015<br>
+                    <div class="col-lg-3 col-lg-offset-2">
+                        <p><u>EDUCATION</u></p>
+                        Codeup<br>
+                        Web Development Bootcamp<br>
+                        Jan – May 2015<br>
+                    </div>
+                    <div class="col-lg-3">
+                        <br>
+                        <br>
+                        University of Illinois <br>
+                        Master of Science, 2003<br>
+                        Library and Information Science <br>
+                    </div>
+                    <div class="col-lg-3">
+                        <br>
+                        <br>
+                        University of Wisconsin <br>
+                        Bachelor of Science, 2000 <br>
+                        Family and Consumer Journalism <br>
+                    </div>
                 </div>
-                <div class="col-lg-3">
-                    <br>
-                    <br>
-                    University of Illinois <br>
-                    Master of Science, 2003<br>
-                    Library and Information Science <br>
-                </div>
-                <div class="col-lg-3">
-                    <br>
-                    <br>
-                    University of Wisconsin <br>
-                    Bachelor of Science, 2000 <br>
-                    Family and Consumer Journalism <br>
-                </div>
-            </div>
 
 
 
 
 
 
-                    </p>
-                </div>
+                    {{-- </p> --}}
+                {{-- </div> --}}
 
                 {{-- Possibly allow to download Resume for view in Modal --}}
                 {{-- <div class="col-lg-8 col-lg-offset-2 text-center">
