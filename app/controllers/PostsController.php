@@ -92,8 +92,9 @@ class PostsController extends BaseController {
 		// });
 
 		return Redirect::action('PostsController@index');
+		}
 	}
-
+	
 	/**
 	 * Display the specified resource.
 	 *
