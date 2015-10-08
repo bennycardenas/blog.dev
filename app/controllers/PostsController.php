@@ -1,6 +1,6 @@
 <?php
 
-class PostsController extends \BaseController {
+class PostsController extends BaseController {
 
 	public function __construct()
 	{
@@ -84,12 +84,12 @@ class PostsController extends \BaseController {
 
 
 		// Email confirmation when new post is added successfully
-		Mail::send('emails.welcome', array('key' => 'value'), function($message)
-		{
+		// Mail::send('emails.welcome', array('key' => 'value'), function($message)
+		// {
 
-			$message->to($user->email, $user->name)->subject('Thanks for your post!');
+		// 	$message->to($user->email, $user->name)->subject('Thanks for your post!');
 
-		});
+		// });
 
 		return Redirect::action('PostsController@index');
 	}
