@@ -24,7 +24,7 @@
                 {{-- <a href="{{{ action('PostsController@edit', post->id) }}}">Edit</a> --}}
                 <h8>Created:{{{$post->created_at}}}</h8>
                 <p>Last updated: {{{$post->updated_at }}}</p>
-                <p>{{{$post->body}}}"</p>
+                <p>{{{$post->body}}}</p>
             @endforeach
         </ul>
     {{$posts->links()}}

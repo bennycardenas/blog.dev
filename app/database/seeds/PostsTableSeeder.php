@@ -9,12 +9,13 @@ class PostsTableSeeder extends Seeder {
 
     public function run()
     {
+        // $user = 
         // $faker = Faker::create(); ***
-        $post = create();
+        // $post = create();
 
         // for($i=1; $i<=100; $i++)
         // {
-        //     $user = User::all()->random();
+            // $user = User::all()->rßandom();
 
 
         //     Post::create ([
@@ -38,8 +39,9 @@ class PostsTableSeeder extends Seeder {
         $post = new Post();
         $post->title = 'First Test Post Title';
         $post->body = 'First Test Post Body';
-        $post->slug = title->slug;
-        $post->$user->id = mt_rand(1,8);
+        $post->slug = 'slug';
+        $post->id = mt_rand(1,8);
+        $post->user_id = '1';
         $post->save();
     }
 }
