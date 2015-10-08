@@ -1,6 +1,6 @@
 <?php
 
-use Faker\Factory as Faker;
+// use Faker\Factory as Faker; - ***
 
 class PostsTableSeeder extends Seeder {
 
@@ -9,27 +9,40 @@ class PostsTableSeeder extends Seeder {
 
     public function run()
     {
-        $faker = Faker::create();
+        // $faker = Faker::create(); ***
+        $post = create();
 
-        for($i=1; $i<=100; $i++)
-        {
-            $user = User::all()->random();
+        // for($i=1; $i<=100; $i++)
+        // {
+        //     $user = User::all()->random();
 
 
-            Post::create ([
+        //     Post::create ([
 
-            'title' => $faker->catchPhrase,
-            'body'  => $faker->realText($maxNbChars = 200, $indexSize = 2),
-            'slug'  => $faker->unique()->slug,
-            'user_id'  => $user->id,
+        //     'title' => $faker->catchPhrase,
+        //     'body'  => $faker->realText($maxNbChars = 200, $indexSize = 2),
+        //     'slug'  => $faker->unique()->slug,
+        //     'user_id'  => $user->id,
 
-            ]);
-            // $post = new Post();
-            // $post->title = $faker->catchPhrase;
-            // $post->body = $faker->realText($maxNbChars = 200, $indexSize = 2);
-            // $post->slug = $faker->slug;
-            // $post->$user->id = mt_rand(1,8);
-            // $post->save();
-        }
+        //     ]);
+        // }
+
+
+        // $post = new Post();
+        // $post->title = $faker->catchPhrase;
+        // $post->body = $faker->realText($maxNbChars = 200, $indexSize = 2);
+        // $post->slug = $faker->slug;
+        // $post->$user->id = mt_rand(1,8);
+        // $post->save();
+
+        $post = new Post();
+        $post->title = 'First Test Post Title';
+        $post->body = 'First Test Post Body';
+        $post->slug = title->slug;
+        $post->$user->id = mt_rand(1,8);
+        $post->save();
     }
 }
+
+
+
