@@ -82,9 +82,16 @@ class PostsController extends \BaseController {
 		Log::info('Title:' . Input::get('title'));
 		Log::info('Body:' . Input::get('body'));
 
-		return Redirect::action('PostsController@index');
 
-		}
+		// Email confirmation when new post is added successfully
+		Mail::send('emails.welcome', array('key' => 'value'), function($message)
+		{
+
+			$message->to($user->email, $user->name)->subject('Thanks for your post!');
+
+		});
+
+		return Redirect::action('PostsController@index');
 	}
 
 	/**
