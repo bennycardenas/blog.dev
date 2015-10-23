@@ -21,41 +21,43 @@
                 </div>
             </div>
             <div class="row">
-                <div class="col-lg-4 col-lg-offset-2">
+                <div class="col-lg-8 col-lg-offset-2">
                     {{-- <p> <u> CONTACT </u> </p> --}}
                     <center>
                     {{-- 1211 W. Ashby Pl      |  
                     San Antonio, TX 78201  |   --}}
-                    benitocardenas@gmail.com  |  
+                    benitocardenas@gmail.com   |   
                     210.322.0876</center>
                 </div>
                 <br>
             </div>
             <br>
-                <div class="col-lg-4">
+                <div class="col-lg-6 col-lg-offset-3">
                     <p> <u> SKILLS </u> </p>
-                    Linux, Apache(NginX), MySQL, PHP, JavaScript, jQuery, HTML5, CSS3, Laravel, Git, GitHub, Microsoft Office, Information Literacy Development, Source Tree, CLI </p>
+                    Linux, Apache(NginX), MySQL, PHP, JavaScript, jQuery, HTML5, CSS3, Laravel, Git, GitHub, Microsoft Office, Information Literacy Development, Source Tree, CLI, Twitter Bootstrap, Foundation CSS, Python, Django </p>
                 </div>
                 <br>
-                <div class="col-lg-8 col-lg-offset-2">
+                <div class="col-lg-6 col-lg-offset-3">
                     <p> <u> WEB DEVELOPMENT EXPERIENCE </u> </p>
-                        <p>Weather Forecast Web App</p>
-                        Constructed a web app that provides real-time forecasts with click-and-drag functionality using APIs for Google and Open Weather in conjunction with AJAX
-                </div>
-                <br>
-                <div class="col-lg-8 col-lg-offset-2">
-                    <p>National Parks Database Web App</p>
-                        Developed a basic framework to generate a web interface in order to access/modify a database of National Parks using PHP, MySQL Pro, Twitter Bootstrap
-                </div>
-                <br>
-                <div class="col-lg-8 col-lg-offset-2">
                     <p>Blog/Personal Page</p>
                         Built this personal site with blog with user authentication using Laravel, MySQL Pro, Twitter Bootstrap, Custom CSS, Pure CSS Framework, Faker
                 </div>
                 <br>
-                <div class="col-lg-8 col-lg-offset-2">
+                <div class="col-lg-6 col-lg-offset-3">
+                    <br>
+                    <p>National Parks Database Web App</p>
+                        Developed a basic framework to generate a web interface in order to access/modify a database of National Parks using PHP, MySQL Pro, Twitter Bootstrap
+                </div>
+                <br>
+                        <p>Weather Forecast Web App</p>
+                        Constructed a web app that provides real-time forecasts with click-and-drag functionality using APIs for Google and Open Weather in conjunction with AJAX
+                <div class="col-lg-6 col-lg-offset-3">
+                    <br>
+                </div>
 
-                    <p><u>ADDITIONAL EXPERIENCE</u></p>
+                <div class="col-lg-6 col-lg-offset-3">
+                    <br>
+                    <p><u>PROFESSIONAL EXPERIENCE</u></p>
 
                         <p>System Developer Associate, Accenture, May 2015 - Oct 2015, San Antonio, TX</p>
                         <ul>
@@ -72,7 +74,7 @@
                             <li>Performed issuance of social security numbers and replacement cards</li>
                         </ul>
                 </div>
-                <div class="col-lg-8 col-lg-offset-2">
+                <div class="col-lg-6 col-lg-offset-3">
                         <p>Director, One Telluride, Dec 2005 – Aug 2009, Telluride, CO</p>
                         <ul>
                             <li>Established One Telluride Cultural Resource Center with mission of Immigrant Integration
@@ -84,7 +86,7 @@
                         </ul>
                 </div>
 
-                <div class="col-lg-8 col-lg-offset-2">
+                <div class="col-lg-6 col-lg-offset-3">
                         <p>Bilingual Reference Librarian, Weld Library District, July 2004 – May 2006, Greeley, CO</p>
                         <ul>
                             <li>Served as interim webmaster as well as maintained and developed bilingual website content
@@ -95,7 +97,7 @@
                             </li>
                         </ul>
                 </div>
-                <div class="col-lg-8 col-lg-offset-2">
+                <div class="col-lg-6 col-lg-offset-3">
                         <p>Librarian I, San Antonio Public Library, Jan. 2004 – July 2004, San Antonio, TX</p>
                         <ul>
                             <li>Performed reference services, bibliographic instruction and computer maintenance/coaching
@@ -104,7 +106,7 @@
                             </li>
                         </ul>
                 </div>
-                <div class="col-lg-8 col-lg-offset-2">
+                <div class="col-lg-6 col-lg-offset-3">
                         <p>Library Assistant, Champaign Public Library, Aug. 2003 – Dec. 2003, Champaign, IL</p>
                         <ul>
                             <li>Supported Reference Librarians in researching in-depth topics for academic inquiries
@@ -113,7 +115,7 @@
                             </li>
                         </ul>
                 </div>
-                <div class="col-lg-8 col-lg-offset-2">
+                <div class="col-lg-6 col-lg-offset-3">
                         <p>Special Librarian, University of Illinois, 6/03 – 12/03, Urbana, IL</p>
                         <ul>
                             <li>Supported Intellectual Property investments by serving as full-time researcher.
@@ -123,33 +125,28 @@
                         </ul>
                 </div>
                 <br>
-                <div class="row">
-                    <div class="col-lg-3 col-lg-offset-2">
+                    <div class="col-lg-2 col-lg-offset-3">
                         <p><u>EDUCATION</u></p>
-                        Codeup<br>
-                        Web Development Bootcamp<br>
+                        <strong>Codeup</strong><br>
+                        Web Development
+                        <br>
+                        Bootcamp<br>
                         Jan – May 2015<br>
                     </div>
-                    <div class="col-lg-3">
+                    <div class="col-lg-2">
                         <br>
                         <br>
-                        University of Illinois <br>
+                        <strong>University of Illinois</strong><br>
                         Master of Science, 2003<br>
                         Library and Information Science <br>
                     </div>
-                    <div class="col-lg-3">
+                    <div class="col-lg-2">
                         <br>
                         <br>
-                        University of Wisconsin <br>
+                        <strong>University of Wisconsin</strong><br>
                         Bachelor of Science, 2000 <br>
                         Family and Consumer Journalism <br>
                     </div>
-                </div>
-
-
-
-
-
 
                     {{-- </p> --}}
                 {{-- </div> --}}

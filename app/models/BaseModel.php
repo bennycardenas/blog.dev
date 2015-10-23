@@ -3,7 +3,8 @@
 use Carbon\Carbon;
 use \Esensi\Model\Model;
 
-class BaseModel extends Model
+class BaseModel extends Eloquent
+
 {
     public function getCreatedAtAttribute($value)
     {

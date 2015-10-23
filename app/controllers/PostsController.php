@@ -1,5 +1,6 @@
 <?php
 
+// class PostsController extends \BaseController
 class PostsController extends BaseController {
 
 	public function __construct()
@@ -94,7 +95,7 @@ class PostsController extends BaseController {
 		return Redirect::action('PostsController@index');
 		}
 	}
-	
+
 	/**
 	 * Display the specified resource.
 	 *

@@ -21,8 +21,10 @@
     }
 </style>
     <h1>Blog Entry</h1>
-        {{ Form::open(array('action' => 'PostsController@store', 'class'=> 'pure-form pure-form-aligned' )) }}
-            <fieldset>
+        {{ Form::open(array('action' => 'PostsController@store', 'class'=> 'pure-form pure-form-aligned', 'method' => 'POST')) }}
+        {{Form::token()}}
+
+            {{-- <fieldset> --}}
                 <div class="pure-control-group">
                     {{ Form::label('title', 'Title') }}
                     {{ Form::text('title', Input::old('title'), array('placeholder'=>'Title')) }}
@@ -37,12 +39,14 @@
                 </div>
 
 
-                <div class="pure-controls">
-                    {{-- {{ Form::submit()}} --}}
-                    <button type="submit" class="pure-button pure-button-primary">Submit Blog Entry!
-                    </button>
+                <div>
+                    {{ Form::submit('Submit Blog Entry', array('class' => 'pure-controls'))}}
+                    {{-- {{Form::button('Submit Blog Entry')}} --}}
+                    {{-- <button type="submit" class="pure-button pure-button-primary">Submit Blog Entry!
+                    </button> --}}
                 </div>
-            </fieldset>
+                <br>
+            {{-- </fieldset> --}}
         {{ Form::close() }}
 
 @stop
