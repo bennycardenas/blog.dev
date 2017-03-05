@@ -1,7 +1,7 @@
 <?php
 
-// class PostsController extends \BaseController
-class PostsController extends BaseController {
+class PostsController extends \BaseController {
+// class PostsController extends BaseController {
 
 	public function __construct()
 	{

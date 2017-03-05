@@ -20,7 +20,11 @@
         </form>
         <ul>
             @foreach($posts as $post)
-            <h3><a href="{{{action('PostsController@show', $post->slug)}}}">{{{$post->title}}}</a></h3>
+                <h3>
+                    <a href="{{{action('PostsController@show', $post->slug)}}}">
+                        {{{$post->title}}}
+                    </a>
+                </h3>
                 {{-- <a href="{{{ action('PostsController@edit', post->id) }}}">Edit</a> --}}
                 <h8>Created:{{{$post->created_at}}}</h8>
                 <p>Last updated: {{{$post->updated_at }}}</p>

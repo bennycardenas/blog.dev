@@ -31,6 +31,11 @@ class HomeController extends BaseController {
 		return View::make('resume');
 	}
 
+	public function showJs()
+	{
+		return View::make('jsmeetup');
+	}
+
 	public function showPortfolio()
 	{
 		return View::make('portfolio');
