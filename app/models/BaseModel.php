@@ -1,6 +1,6 @@
 <?php
 
-// use Carbon\Carbon;
+use Carbon\Carbon;
 use \Esensi\Model\Model;
 
 class BaseModel extends Eloquent
